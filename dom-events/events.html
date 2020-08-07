@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event management company</title>
+</head>
+<body>
+    <h1 onclick="alert('hero programmer')">exploring events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi beatae voluptas atque quas nulla, harum voluptatum dolorum maiores recusandae rem, reiciendis omnis voluptatem deleniti veniam, culpa officiis perferendis tempore nesciunt.</p>
+    <p>Veritatis consectetur placeat quos corporis, ex veniam dignissimos ad! Numquam officia doloribus iste amet quo accusamus, hic repellat dicta explicabo sit aliquam magni laboriosam ad tempore? Unde illo soluta aspernatur.</p>
+    <button onmouseout="handleClick()">click me-0</button>
+    <button>click me-1</button>
+    <button id="second">click me-2</button>
+    <button>click me-3</button>
+    <button id="lastButton">click me-4</button>
+    <script>
+        function handleClick(){
+            console.log(new Date);
+        }
+
+         document.getElementById('lastButton').addEventListener('click', function(){
+             document.body.style.color = 'tomato';
+         })
+
+
+
+        // function handlerClick (){
+        //     document.body.style.backgroundColor = 'blue';
+        // }
+        // const secondButton = document.getElementById('second');
+        // secondButton.addEventListener('click', handlerClick)
+
+
+        // function handlerClick (){
+        //     document.body.style.backgroundColor = 'cyan';
+        // }
+        // const secondButton = document.getElementById('second');
+        // secondButton.onclick = handlerClick ;                         functionti ei lineo = er por likha jete pare.
+
+
+
+        // const secondButton = document.getElementById('second');
+        // secondButton.onclick = function(){
+        //     console.log('second person clicked');
+        // }
+    </script>
+</body>
+</html>

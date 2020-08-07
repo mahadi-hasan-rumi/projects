@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert dom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .special h3{
+            color:  rgb(218, 42, 218);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3 id= "first">exploring Dom</h3>
+            <article class="special" id="first-article">
+                <h3>article-1</h3>
+                <p class="author" id="bestSeller" title="most imprtant author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium voluptate reiciendis porro suscipit itaque placeat voluptates impedit totam, explicabo reprehenderit tempore harum nesciunt. Iure dolorum mollitia blanditiis libero necessitatibus.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Illo a velit accusamus voluptate distinctio dolorem debitis, consequuntur, et quis sequi quidem nostrum cumque possimus! Laboriosam assumenda ducimus deserunt. Ipsam, cupiditate hic. Quidem praesentium pariatur fugit a, doloremque quis?</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Doloribus in harum laborum accusantium error dolorum? Quas assumenda beatae quia eius minima a animi nisi repudiandae, nobis, quos error officia labore, ab ad laudantium ipsam nesciunt unde. Voluptatibus, mollitia.</p>
+            </article>
+            <article>
+                <h3>Grocery Items</h3>
+                <ul id="gift-item">
+                    <li>gift-1</li>
+                    <li>gift-2</li>
+                    <li>gift-3</li>
+                    <li>gift-4</li>
+                    <li>gift-5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    
+    <script>
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'this is added by javascript';
+        article.appendChild(newParagraph);
+        // add new gift
+        const ul = document.getElementById('gift-item');
+        const li = document.createElement('li');
+        li.innerHTML = 'added new gift';
+        ul.appendChild(li);
+    </script>
+    <!-- document.getElementById('first-article').childNodes plus document.getElementById('gift-item').parentNode ; ei podhotite kono ekta id er parent/child element ber kora jay plus kono ekta parent element theke child k remove kora jay google kore way ta dekhe nite hobe ,tnx-->
+
+
+    <!-- node-list:(search:-node.node type) dom er selected kichu collection jokhon nirdishto kichu items er jonne querySelectorAll kora hoy tokhon eki typer sob gula items ekbare node lis akre ashe.akhetre html element/ txt /comment etc selector er majhe ja ja sob kichui show koray..
+    html-collection: eta holo html er tag element er collection- ekhane html tag/ element gula show koray. -->
+</body>
+</html>
